@@ -1,11 +1,29 @@
+"""This is a module level string. It describes the overall purpose
+of this module. For Thinkful courses, I suggest you provide a
+summarization of the requirements given to you in assignments and
+projects.
+
+"""
+
 
 class Bike(object):
+    """This is a class-level docstring. You should describe classes
+    with docstrings like this. Be sure to list and explain a class'
+    attributes, I got you started!
+
+    Attributes:
+        name (str): Bike model name
+
+    """
+
     def __init__(self, name, weight, cost):
         self.name = name
         self.weight = weight
         self.cost = cost
 
+
 class Bike_shop(object):
+
     def __init__(self, name, inventory, markup):
         self.name = name
         self.inventory = inventory
@@ -15,6 +33,7 @@ class Bike_shop(object):
     def sell(self,bike):
         self.inventory[bike] = self.inventory[bike] - 1
         self.profit += bike.cost * self.markup
+
 
 class Customer(object):
     def __init__(self, fund, name):
@@ -50,18 +69,24 @@ store = Bike_shop("Barry's Bikes", inventory, 0.2)
 
 for customer in customers:
     print customer.name, customer.fund
+
     for bike in inventory.keys():
+
         if customer.fund >= bike.cost * (1 + store.markup):
             print bike.name, bike.cost * (1 + store.markup)
+
     print 
 
 print(store.name)
+
 for bike in store.inventory.keys():
+
     print bike.name + ":", store.inventory[bike], "in stock"
+
 print
 
 nick.buy_bike(store, bike2)
-print "Nick bought:", nick.bike.name
+print("Nick bought:", nick.bike.name)
 print "Cost:", nick.bike.cost * (1 + store.markup)
 print "nick has", nick.fund, "left"
 print
@@ -79,9 +104,8 @@ print "josh has", josh.fund, "left"
 print
 
 print(store.name)
+
 for bike in store.inventory.keys():
     print bike.name + ":", store.inventory[bike], "in stock"
+
 print "total profit:", store.profit
-
-
-    
