@@ -86,7 +86,7 @@ for bike in store.inventory.keys():
 print
 
 nick.buy_bike(store, bike2)
-print "Nick bought:", nick.bike.name
+print("Nick bought:", nick.bike.name)
 print "Cost:", nick.bike.cost * (1 + store.markup)
 print "nick has", nick.fund, "left"
 print
@@ -109,6 +109,3 @@ for bike in store.inventory.keys():
     print bike.name + ":", store.inventory[bike], "in stock"
 
 print "total profit:", store.profit
-
-
-    
