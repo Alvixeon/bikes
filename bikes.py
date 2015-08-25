@@ -1,19 +1,23 @@
-"""This is a module level string. It describes the overall purpose
-of this module. For Thinkful courses, I suggest you provide a
-summarization of the requirements given to you in assignments and
-projects.
+"""
+This module will model the bike industry by creating classes to 
+represent:
+
+-bikes
+-bike stores
+-customers
 
 """
 
 
 class Bike(object):
-    """This is a class-level docstring. You should describe classes
-    with docstrings like this. Be sure to list and explain a class'
-    attributes, I got you started!
+    """The bike class creates instances of individual bikes
 
     Attributes:
         name (str): Bike model name
+	weight (int): Weight of bike
+	cost (int): Cost of bike
 
+    
     """
 
     def __init__(self, name, weight, cost):
@@ -23,6 +27,19 @@ class Bike(object):
 
 
 class Bike_shop(object):
+    """The Bike_shop class creates instances of bike shops
+
+    Attributes:
+	name (str): Name of bike shop
+	inventory (dict): Each model of bicycle mapped to the number of the model in stock at store
+	markup (float): Percentage markup that the store charges above the cost of the bicycle
+	profit(float): Amount of profit that the store has generated from its sales 
+
+    Methods:
+	sell: Sells one of the bikes in inventory and increases profit by cost * markup
+
+    """
+
 
     def __init__(self, name, inventory, markup):
         self.name = name
@@ -36,6 +53,19 @@ class Bike_shop(object):
 
 
 class Customer(object):
+    """Customer class creates an instance of a customer who can buy and own a bike
+
+    Attributes:
+	name (str): Name of the customer
+	fund (float): Amount of money that the customer has and can spend on bikes
+	bike (Bike): Bike that the customer owns
+
+    Methods:
+	buy_bike: Customer buys a bike and decreases his or her fund by its cost
+
+
+    """
+
     def __init__(self, fund, name):
         self.name = name
         self.fund = fund
